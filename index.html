@@ -11,7 +11,9 @@
     <div id="app">
         <div class="stats">
             <h2 class="stats__title">{{"Текущие задачи: " + tasks.length}}</h2>
-            <task @task_done="delete_task(index)" :data="data" v-for="(data, index) in tasks" :key="index"></task>
+            <transition-group name="fade">
+                <task @task_done="delete_task(index)" :data="data" v-for="(data, index) in tasks" :key="index" v-if="show"></task>     
+            </transition-group>
         </div>
         <div class="add_task">
             <div class="add_task__input">

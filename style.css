@@ -3,12 +3,14 @@
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 #app {
-    padding: 20px 0 0 20px;
+    min-height: 100vh;
+    height: auto;
     background-color: #eee;
-    padding-bottom: 40px;
 }
 
-
+button {
+    outline: none;
+}
 .task {
     display: flex;
     align-items: center;
@@ -18,6 +20,7 @@
     padding: 10px;
     border-radius: 10px;
     background-color: #fff;
+    transition: all .3s;
 }
 
 .task__done {
@@ -71,3 +74,18 @@
     background-color: rgb(21, 216, 21);
 
 }
+
+.stats {
+    margin-bottom: 40px;
+}
+
+.stats__title {
+    padding: 20px 0 20px 20px;
+}
+
+.fade-enter-active, .fade-leave-active {
+    transition: opacity .5s;
+  }
+.fade-enter, .fade-leave-to /* .fade-leave-active до версии 2.1.8 */ {
+    opacity: 0;
+  }
