@@ -11,6 +11,17 @@
 button {
     outline: none;
 }
+
+.logo {
+    padding: 5px 0 0 5px;
+    font-size: 20px;
+    
+}
+
+.logo span {
+    color: rgb(44, 187, 68);
+}
+
 .task {
     display: flex;
     align-items: center;
